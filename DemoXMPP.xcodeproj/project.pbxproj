@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D46C798BFB4CAE00E31434F /* Pods_DemoXMPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02C2E47A7F0E0E5E3205D56 /* Pods_DemoXMPP.framework */; };
 		E6825D7B25F9612500F1259E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6825D7A25F9612500F1259E /* AppDelegate.swift */; };
 		E6825D7D25F9612500F1259E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6825D7C25F9612500F1259E /* SceneDelegate.swift */; };
 		E6825D7F25F9612500F1259E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6825D7E25F9612500F1259E /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 		E6825D8A25F9612800F1259E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6825D8825F9612800F1259E /* LaunchScreen.storyboard */; };
 		E6825D9525F9612800F1259E /* DemoXMPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6825D9425F9612800F1259E /* DemoXMPPTests.swift */; };
 		E6825DA025F9612800F1259E /* DemoXMPPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6825D9F25F9612800F1259E /* DemoXMPPUITests.swift */; };
+		E6825DC725F9677400F1259E /* XMPPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6825DC625F9677400F1259E /* XMPPController.swift */; };
+		E6825DCD25F967A400F1259E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6825DCC25F967A400F1259E /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10E8F3CD5D554AAD11A8BD1E /* Pods-DemoXMPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoXMPP.release.xcconfig"; path = "Target Support Files/Pods-DemoXMPP/Pods-DemoXMPP.release.xcconfig"; sourceTree = "<group>"; };
+		5400F9030BF62253522D6842 /* Pods-DemoXMPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoXMPP.debug.xcconfig"; path = "Target Support Files/Pods-DemoXMPP/Pods-DemoXMPP.debug.xcconfig"; sourceTree = "<group>"; };
+		D02C2E47A7F0E0E5E3205D56 /* Pods_DemoXMPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoXMPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6825D7725F9612500F1259E /* DemoXMPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoXMPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6825D7A25F9612500F1259E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6825D7C25F9612500F1259E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +57,8 @@
 		E6825D9B25F9612800F1259E /* DemoXMPPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoXMPPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6825D9F25F9612800F1259E /* DemoXMPPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoXMPPUITests.swift; sourceTree = "<group>"; };
 		E6825DA125F9612800F1259E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6825DC625F9677400F1259E /* XMPPController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMPPController.swift; sourceTree = "<group>"; };
+		E6825DCC25F967A400F1259E /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D46C798BFB4CAE00E31434F /* Pods_DemoXMPP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1A967E7DEB75732FC23D7E8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5400F9030BF62253522D6842 /* Pods-DemoXMPP.debug.xcconfig */,
+				10E8F3CD5D554AAD11A8BD1E /* Pods-DemoXMPP.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E6825D6E25F9612500F1259E = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +103,8 @@
 				E6825D9325F9612800F1259E /* DemoXMPPTests */,
 				E6825D9E25F9612800F1259E /* DemoXMPPUITests */,
 				E6825D7825F9612500F1259E /* Products */,
+				A1A967E7DEB75732FC23D7E8 /* Pods */,
+				FE3324F7557A6B7DBD66C1EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,9 +121,10 @@
 		E6825D7925F9612500F1259E /* DemoXMPP */ = {
 			isa = PBXGroup;
 			children = (
+				E6825DCB25F9678E00F1259E /* View */,
+				E6825DC525F9675B00F1259E /* ThirdPartyWrapper */,
 				E6825D7A25F9612500F1259E /* AppDelegate.swift */,
 				E6825D7C25F9612500F1259E /* SceneDelegate.swift */,
-				E6825D7E25F9612500F1259E /* ViewController.swift */,
 				E6825D8025F9612500F1259E /* Main.storyboard */,
 				E6825D8625F9612800F1259E /* Assets.xcassets */,
 				E6825D8825F9612800F1259E /* LaunchScreen.storyboard */,
@@ -131,6 +152,31 @@
 			path = DemoXMPPUITests;
 			sourceTree = "<group>";
 		};
+		E6825DC525F9675B00F1259E /* ThirdPartyWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				E6825DC625F9677400F1259E /* XMPPController.swift */,
+			);
+			path = ThirdPartyWrapper;
+			sourceTree = "<group>";
+		};
+		E6825DCB25F9678E00F1259E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E6825DCC25F967A400F1259E /* LogInViewController.swift */,
+				E6825D7E25F9612500F1259E /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE3324F7557A6B7DBD66C1EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D02C2E47A7F0E0E5E3205D56 /* Pods_DemoXMPP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6825DA425F9612800F1259E /* Build configuration list for PBXNativeTarget "DemoXMPP" */;
 			buildPhases = (
+				C44F7CCAD7D535F660079E2B /* [CP] Check Pods Manifest.lock */,
 				E6825D7325F9612500F1259E /* Sources */,
 				E6825D7425F9612500F1259E /* Frameworks */,
 				E6825D7525F9612500F1259E /* Resources */,
+				A43E3A71F9662576FA925B62 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,12 +304,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A43E3A71F9662576FA925B62 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DemoXMPP/Pods-DemoXMPP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DemoXMPP/Pods-DemoXMPP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoXMPP/Pods-DemoXMPP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C44F7CCAD7D535F660079E2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DemoXMPP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E6825D7325F9612500F1259E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6825DC725F9677400F1259E /* XMPPController.swift in Sources */,
 				E6825D7F25F9612500F1259E /* ViewController.swift in Sources */,
+				E6825DCD25F967A400F1259E /* LogInViewController.swift in Sources */,
 				E6825D7B25F9612500F1259E /* AppDelegate.swift in Sources */,
 				E6825D7D25F9612500F1259E /* SceneDelegate.swift in Sources */,
 				E6825D8525F9612500F1259E /* DemoXMPP.xcdatamodeld in Sources */,
@@ -437,6 +529,7 @@
 		};
 		E6825DA525F9612800F1259E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5400F9030BF62253522D6842 /* Pods-DemoXMPP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -450,12 +543,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rishabh.machineround.DemoXMPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		E6825DA625F9612800F1259E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10E8F3CD5D554AAD11A8BD1E /* Pods-DemoXMPP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -469,7 +563,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rishabh.machineround.DemoXMPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
