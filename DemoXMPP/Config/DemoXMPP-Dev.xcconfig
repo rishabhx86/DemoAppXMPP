@@ -1,0 +1,11 @@
+//
+//  DemoXMPP-Dev.xcconfig
+//  DemoXMPP
+//
+//  Created by rishabh trivedi on 11/03/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+WEATHER_API_KEY = ba95e4caf5b35813b1ad6fca30e56f8e

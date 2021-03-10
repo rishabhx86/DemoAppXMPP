@@ -4,13 +4,14 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="oIS-Rb-e6g">
             <objects>
-                <viewController id="6Zy-g1-DBQ" customClass="ViewController" customModule="CrazyMessages" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6Zy-g1-DBQ" customClass="ViewController" customModule="DemoXMPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MED-by-4d2"/>
                         <viewControllerLayoutGuide type="bottom" id="6RO-na-564"/>
@@ -19,32 +20,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are connected and authenticated!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saM-Ak-ZAa">
-                                <rect key="frame" x="62.5" y="337.5" width="289.5" height="21"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2OY-Rr-nf0">
+                                <rect key="frame" x="20" y="101" width="374" height="753"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEs-aQ-uY5">
+                                <rect key="frame" x="186" y="52" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="darkTextColor"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0tR-oW-UfK"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="saM-Ak-ZAa" firstAttribute="centerX" secondItem="T5U-M7-JXY" secondAttribute="centerX" id="OoM-ff-fWa"/>
-                            <constraint firstItem="saM-Ak-ZAa" firstAttribute="centerY" secondItem="T5U-M7-JXY" secondAttribute="centerY" constant="-100" id="Y3Y-gb-Ni7"/>
+                            <constraint firstItem="2OY-Rr-nf0" firstAttribute="leading" secondItem="0tR-oW-UfK" secondAttribute="leading" constant="20" id="6Nd-mY-j6A"/>
+                            <constraint firstItem="0tR-oW-UfK" firstAttribute="bottom" secondItem="2OY-Rr-nf0" secondAttribute="bottom" constant="8" id="Fg6-9z-foW"/>
+                            <constraint firstItem="0tR-oW-UfK" firstAttribute="trailing" secondItem="2OY-Rr-nf0" secondAttribute="trailing" constant="20" id="LFm-yO-Fic"/>
+                            <constraint firstItem="2OY-Rr-nf0" firstAttribute="top" secondItem="EEs-aQ-uY5" secondAttribute="bottom" constant="28" id="W0h-XS-dzh"/>
+                            <constraint firstItem="EEs-aQ-uY5" firstAttribute="centerX" secondItem="T5U-M7-JXY" secondAttribute="centerX" id="fJE-PB-c8e"/>
+                            <constraint firstItem="EEs-aQ-uY5" firstAttribute="top" secondItem="0tR-oW-UfK" secondAttribute="top" constant="8" id="hdk-B3-OFP"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="2OY-Rr-nf0" id="T3Q-GE-vrU"/>
+                        <outlet property="topLabel" destination="EEs-aQ-uY5" id="cxj-XY-dXE"/>
                         <segue destination="iKe-BX-COX" kind="presentation" identifier="LogInViewController" id="ODJ-9q-S6m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFE-JA-zNr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672" y="55"/>
+            <point key="canvasLocation" x="671.01449275362324" y="54.910714285714285"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="6be-Wv-SWw">
             <objects>
-                <viewController id="iKe-BX-COX" customClass="LogInViewController" customModule="CrazyMessages" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iKe-BX-COX" customClass="LogInViewController" customModule="DemoXMPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="O49-vF-E9e"/>
                         <viewControllerLayoutGuide type="bottom" id="owI-rG-nCi"/>
@@ -147,8 +158,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="darkTextColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

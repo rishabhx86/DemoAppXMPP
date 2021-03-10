@@ -79,3 +79,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+func infoForKey(_ key: String) -> String? {
+        return (Bundle.main.infoDictionary?[key] as? String)
+ }

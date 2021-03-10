@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		9D46C798BFB4CAE00E31434F /* Pods_DemoXMPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02C2E47A7F0E0E5E3205D56 /* Pods_DemoXMPP.framework */; };
+		E61409AE25F9717200106F2E /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61409AC25F9717200106F2E /* WeatherTableViewCell.swift */; };
+		E61409AF25F9717200106F2E /* WeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E61409AD25F9717200106F2E /* WeatherTableViewCell.xib */; };
+		E61409B825F9722E00106F2E /* Terminology.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61409B725F9722E00106F2E /* Terminology.swift */; };
+		E651614025F9767B00815E11 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = E651613F25F9767B00815E11 /* Service.swift */; };
+		E651614E25F97E8000815E11 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E651614D25F97E8000815E11 /* WeatherModel.swift */; };
 		E6825D7B25F9612500F1259E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6825D7A25F9612500F1259E /* AppDelegate.swift */; };
 		E6825D7D25F9612500F1259E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6825D7C25F9612500F1259E /* SceneDelegate.swift */; };
 		E6825D7F25F9612500F1259E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6825D7E25F9612500F1259E /* ViewController.swift */; };
@@ -42,6 +47,12 @@
 		10E8F3CD5D554AAD11A8BD1E /* Pods-DemoXMPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoXMPP.release.xcconfig"; path = "Target Support Files/Pods-DemoXMPP/Pods-DemoXMPP.release.xcconfig"; sourceTree = "<group>"; };
 		5400F9030BF62253522D6842 /* Pods-DemoXMPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoXMPP.debug.xcconfig"; path = "Target Support Files/Pods-DemoXMPP/Pods-DemoXMPP.debug.xcconfig"; sourceTree = "<group>"; };
 		D02C2E47A7F0E0E5E3205D56 /* Pods_DemoXMPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoXMPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E61409AC25F9717200106F2E /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		E61409AD25F9717200106F2E /* WeatherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherTableViewCell.xib; sourceTree = "<group>"; };
+		E61409B725F9722E00106F2E /* Terminology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Terminology.swift; sourceTree = "<group>"; };
+		E651613F25F9767B00815E11 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		E651614525F97AB100815E11 /* DemoXMPP-Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "DemoXMPP-Dev.xcconfig"; sourceTree = "<group>"; };
+		E651614D25F97E8000815E11 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		E6825D7725F9612500F1259E /* DemoXMPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoXMPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6825D7A25F9612500F1259E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6825D7C25F9612500F1259E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +107,56 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E61409AB25F9714A00106F2E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E61409AC25F9717200106F2E /* WeatherTableViewCell.swift */,
+				E61409AD25F9717200106F2E /* WeatherTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E61409B625F9721800106F2E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E61409B725F9722E00106F2E /* Terminology.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E61409BF25F973B900106F2E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E6825DCC25F967A400F1259E /* LogInViewController.swift */,
+				E6825D7E25F9612500F1259E /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E651612C25F974C400815E11 /* HTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				E651613F25F9767B00815E11 /* Service.swift */,
+			);
+			path = HTTPRequest;
+			sourceTree = "<group>";
+		};
+		E651614425F97A8C00815E11 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				E651614525F97AB100815E11 /* DemoXMPP-Dev.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		E651614C25F97E4600815E11 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				E651614D25F97E8000815E11 /* WeatherModel.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
 		E6825D6E25F9612500F1259E = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +182,10 @@
 		E6825D7925F9612500F1259E /* DemoXMPP */ = {
 			isa = PBXGroup;
 			children = (
+				E651614C25F97E4600815E11 /* Modal */,
+				E651614425F97A8C00815E11 /* Config */,
+				E651612C25F974C400815E11 /* HTTPRequest */,
+				E61409B625F9721800106F2E /* Resources */,
 				E6825DCB25F9678E00F1259E /* View */,
 				E6825DC525F9675B00F1259E /* ThirdPartyWrapper */,
 				E6825D7A25F9612500F1259E /* AppDelegate.swift */,
@@ -163,8 +228,8 @@
 		E6825DCB25F9678E00F1259E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E6825DCC25F967A400F1259E /* LogInViewController.swift */,
-				E6825D7E25F9612500F1259E /* ViewController.swift */,
+				E61409BF25F973B900106F2E /* Controllers */,
+				E61409AB25F9714A00106F2E /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -282,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E61409AF25F9717200106F2E /* WeatherTableViewCell.xib in Resources */,
 				E6825D8A25F9612800F1259E /* LaunchScreen.storyboard in Resources */,
 				E6825D8725F9612800F1259E /* Assets.xcassets in Resources */,
 				E6825D8225F9612500F1259E /* Main.storyboard in Resources */,
@@ -353,8 +419,12 @@
 			files = (
 				E6825DC725F9677400F1259E /* XMPPController.swift in Sources */,
 				E6825D7F25F9612500F1259E /* ViewController.swift in Sources */,
+				E61409AE25F9717200106F2E /* WeatherTableViewCell.swift in Sources */,
 				E6825DCD25F967A400F1259E /* LogInViewController.swift in Sources */,
+				E651614E25F97E8000815E11 /* WeatherModel.swift in Sources */,
 				E6825D7B25F9612500F1259E /* AppDelegate.swift in Sources */,
+				E651614025F9767B00815E11 /* Service.swift in Sources */,
+				E61409B825F9722E00106F2E /* Terminology.swift in Sources */,
 				E6825D7D25F9612500F1259E /* SceneDelegate.swift in Sources */,
 				E6825D8525F9612500F1259E /* DemoXMPP.xcdatamodeld in Sources */,
 			);
@@ -413,6 +483,7 @@
 /* Begin XCBuildConfiguration section */
 		E6825DA225F9612800F1259E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E651614525F97AB100815E11 /* DemoXMPP-Dev.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
