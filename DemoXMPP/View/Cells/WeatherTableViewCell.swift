@@ -19,4 +19,8 @@ class WeatherTableViewCell: UITableViewCell {
         cityNameLbl.text = data.cityName
         wetherLbl.text = String(format: "%.2f",data.main?.temp ?? 0.0)
     }
+    func displayLocalData(data: WeatherDetail) {
+        cityNameLbl.text = data.city_name
+        wetherLbl.text = String(format: "%.2f", data.temp)
+    }
 }

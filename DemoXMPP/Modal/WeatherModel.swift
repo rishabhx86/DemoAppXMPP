@@ -101,3 +101,14 @@ struct Main : Codable {
     }
 
 }
+
+struct WeatherCoreData {
+    var weather: Double
+    var cityName: String
+    
+    init(weather: Double, cityName: String){
+        self.weather = weather
+        self.cityName = cityName
+        
+    }
+}

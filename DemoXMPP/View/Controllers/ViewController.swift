@@ -104,5 +104,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        
+        guard let vc = sb.instantiateViewController(withIdentifier: "WeatherDetailViewController") as? WeatherDetailViewController else {
+            return
+        }
+        vc.data = self.weatherData?.list?[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
