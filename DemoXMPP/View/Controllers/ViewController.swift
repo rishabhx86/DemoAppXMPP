@@ -17,10 +17,21 @@ class ViewController: UIViewController {
     weak var logInViewController: LogInViewController?
     var logInPresented = false
     var xmppController: XMPPController!
+    var weatherData : WeatherData?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+    }
+    private func getWeatherData() {
+        Service.shareInstance.getAllWeatherData { (weather, error) in
+            if(error==nil){
+                self.weatherData = weather
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
     private func setupUI() {
         topLabel.text = AppString.weatherList
@@ -41,6 +52,7 @@ class ViewController: UIViewController {
         if segue.identifier == "LogInViewController" {
             let viewController = segue.destination as! LogInViewController
             viewController.delegate = self
+            viewController.isModalInPresentation = true
         }
     }
 }
@@ -66,6 +78,7 @@ extension ViewController: XMPPStreamDelegate {
 
     func xmppStreamDidAuthenticate(_ sender: XMPPStream) {
         self.logInViewController?.dismiss(animated: true, completion: nil)
+        getWeatherData()
     }
     
     func xmppStream(_ sender: XMPPStream, didNotAuthenticate error: DDXMLElement) {
@@ -76,11 +89,18 @@ extension ViewController: XMPPStreamDelegate {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        if let weather = weatherData {
+            return weather.list?.count ?? 0
+        } else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Nibnames.weatherTableViewCell, for: indexPath) as! WeatherTableViewCell
+        if let data = self.weatherData?.list?[indexPath.row]{
+            cell.configCell(data: data)
+        }
         return cell
     }
     

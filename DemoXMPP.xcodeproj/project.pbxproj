@@ -11,6 +11,7 @@
 		E61409AE25F9717200106F2E /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61409AC25F9717200106F2E /* WeatherTableViewCell.swift */; };
 		E61409AF25F9717200106F2E /* WeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E61409AD25F9717200106F2E /* WeatherTableViewCell.xib */; };
 		E61409B825F9722E00106F2E /* Terminology.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61409B725F9722E00106F2E /* Terminology.swift */; };
+		E64417F325F9C7EA00B16F4A /* WeatherDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64417F225F9C7EA00B16F4A /* WeatherDataViewModel.swift */; };
 		E651614025F9767B00815E11 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = E651613F25F9767B00815E11 /* Service.swift */; };
 		E651614E25F97E8000815E11 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E651614D25F97E8000815E11 /* WeatherModel.swift */; };
 		E6825D7B25F9612500F1259E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6825D7A25F9612500F1259E /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 		E61409AC25F9717200106F2E /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 		E61409AD25F9717200106F2E /* WeatherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherTableViewCell.xib; sourceTree = "<group>"; };
 		E61409B725F9722E00106F2E /* Terminology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Terminology.swift; sourceTree = "<group>"; };
+		E64417F225F9C7EA00B16F4A /* WeatherDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataViewModel.swift; sourceTree = "<group>"; };
 		E651613F25F9767B00815E11 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		E651614525F97AB100815E11 /* DemoXMPP-Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "DemoXMPP-Dev.xcconfig"; sourceTree = "<group>"; };
 		E651614D25F97E8000815E11 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
@@ -133,6 +135,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		E64417F125F9C7C600B16F4A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E64417F225F9C7EA00B16F4A /* WeatherDataViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		E651612C25F974C400815E11 /* HTTPRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +192,7 @@
 		E6825D7925F9612500F1259E /* DemoXMPP */ = {
 			isa = PBXGroup;
 			children = (
+				E64417F125F9C7C600B16F4A /* ViewModel */,
 				E651614C25F97E4600815E11 /* Modal */,
 				E651614425F97A8C00815E11 /* Config */,
 				E651612C25F974C400815E11 /* HTTPRequest */,
@@ -427,6 +438,7 @@
 				E61409B825F9722E00106F2E /* Terminology.swift in Sources */,
 				E6825D7D25F9612500F1259E /* SceneDelegate.swift in Sources */,
 				E6825D8525F9612500F1259E /* DemoXMPP.xcdatamodeld in Sources */,
+				E64417F325F9C7EA00B16F4A /* WeatherDataViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
