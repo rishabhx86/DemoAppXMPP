@@ -15,9 +15,9 @@ class WeatherTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    func configCell(data: List){
+    func configCell(data: WeatherDataViewModel){
         cityNameLbl.text = data.cityName
-        wetherLbl.text = String(format: "%.2f",data.main?.temp ?? 0.0)
+        wetherLbl.text = String(format: "%.2f",data.temp ?? 0.0)
     }
     func displayLocalData(data: WeatherDetail) {
         cityNameLbl.text = data.city_name

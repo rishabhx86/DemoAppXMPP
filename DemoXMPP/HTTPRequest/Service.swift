@@ -13,7 +13,7 @@ class Service: NSObject {
     
     static let shareInstance = Service()
     
-    func getAllWeatherData(completion: @escaping(WeatherData?, Error?) -> ()){
+    func getAllWeatherData(completion: @escaping([List]?, Error?) -> ()){
         let urlString = "https://api.openweathermap.org/data/2.5/find?lat=26.8467&lon=80.9462&appid=\(infoForKey("kWeatherApiKey") ?? "")"
         guard let url = URL(string: urlString) else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -23,12 +23,12 @@ class Service: NSObject {
             }else{
                 guard let data = data else { return }
                 do{
-//                    var arrMovieData = [WeatherData]()
+                    var arrWeatherData = [List]()
                     let results = try JSONDecoder().decode(WeatherData.self, from: data)
-//                    for movie in results.results{
-//                        arrMovieData.append(MovieModel(artistName: movie.artistName!, trackName: movie.trackName!))
-//                    }
-                    completion(results, nil)
+                    for item in results.list ?? []{
+                        arrWeatherData.append(item)
+                    }
+                    completion(arrWeatherData, nil)
                 }catch let jsonErr{
                     print("json error : \(jsonErr.localizedDescription)")
                 }

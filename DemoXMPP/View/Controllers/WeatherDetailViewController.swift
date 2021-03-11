@@ -12,7 +12,7 @@ class WeatherDetailViewController: UIViewController {
     @IBOutlet weak var cityNameLbl: UILabel!
     @IBOutlet weak var tempLbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    var data: List?
+    var data: WeatherDataViewModel!
     var weatherArray: [WeatherDetail] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,17 +20,18 @@ class WeatherDetailViewController: UIViewController {
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
         weatherArray = DatabaseHelper.shareInstance.getweather()
-        cityNameLbl.text = data?.cityName ?? ""
-        tempLbl.text = String(format: "%.2f", data?.main?.temp ?? 0.0)
+        cityNameLbl.text = data.cityName
+        tempLbl.text = String(format: "%.2f", data.temp ?? 0.0)
         setupTableView()
     }
+    
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: Nibnames.weatherTableViewCell, bundle: nil), forCellReuseIdentifier: Nibnames.weatherTableViewCell)
     }
      @objc func appMovedToBackground() {
-        DatabaseHelper.shareInstance.save(object: WeatherCoreData(weather: data?.main?.temp ?? 0.0, cityName: data?.cityName ?? ""))
+        DatabaseHelper.shareInstance.save(object: WeatherCoreData(weather: data.temp ?? 0.0, cityName: data.cityName ?? ""))
     }
     
 }

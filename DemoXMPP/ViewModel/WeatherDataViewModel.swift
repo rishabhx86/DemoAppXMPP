@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+class WeatherDataViewModel: NSObject {
+
+    var cityName: String?
+    var temp: Double?
+    
+   // D I
+    
+    init(weather:List){
+        self.cityName = weather.cityName
+        self.temp = weather.main?.temp
+    }
+    
+}

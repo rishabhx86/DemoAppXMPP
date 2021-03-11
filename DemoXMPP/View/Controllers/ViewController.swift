@@ -17,8 +17,7 @@ class ViewController: UIViewController {
     weak var logInViewController: LogInViewController?
     var logInPresented = false
     var xmppController: XMPPController!
-    var weatherData : WeatherData?
-
+    var arrWeatherVM = [WeatherDataViewModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -26,7 +25,7 @@ class ViewController: UIViewController {
     private func getWeatherData() {
         Service.shareInstance.getAllWeatherData { (weather, error) in
             if(error==nil){
-                self.weatherData = weather
+                self.arrWeatherVM = weather?.map({ return WeatherDataViewModel(weather: $0) }) ?? []
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -89,18 +88,12 @@ extension ViewController: XMPPStreamDelegate {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let weather = weatherData {
-            return weather.list?.count ?? 0
-        } else {
-            return 0
-        }
+            return arrWeatherVM.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Nibnames.weatherTableViewCell, for: indexPath) as! WeatherTableViewCell
-        if let data = self.weatherData?.list?[indexPath.row]{
-            cell.configCell(data: data)
-        }
+            cell.configCell(data: self.arrWeatherVM[indexPath.row])
         return cell
     }
     
@@ -110,7 +103,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         guard let vc = sb.instantiateViewController(withIdentifier: "WeatherDetailViewController") as? WeatherDetailViewController else {
             return
         }
-        vc.data = self.weatherData?.list?[indexPath.row]
+        vc.data = self.arrWeatherVM[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
